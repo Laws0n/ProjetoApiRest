@@ -12,7 +12,7 @@ public class UpdateClienteDto
     public string Nome { get; set; }
     [Required(ErrorMessage = "O gênero é obrigatório.")]
 
-    
+    [Range(0, 2, ErrorMessage = "Genêro incorreto!")]
     public EGenero Genero { get; set; }
     [Required(ErrorMessage = "O DNI É Obrigatório.")]
     [Range(10000, 99999999, ErrorMessage = "O DNI deve conter entre 5 a 10 dígitos.")]
